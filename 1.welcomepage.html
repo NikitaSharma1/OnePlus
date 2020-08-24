@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="welcomepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="pace.min.js"></script>
+</head>
+
+<body>
+    <script>
+        document.body.className += ' fade-out';
+    </script>
+    <div class="section">
+        <div class="sub">
+            <h2 class="heading">"NEVER SETTLE"</h2>
+            <h2>Always strive for greatness. It’s a clear objective. You need to stay focused and farsighted. Never Settle is not just a slogan, but a pledge to be a better version of yourself.</h2>
+
+            <a href="2.homepage.html" class="letsstart fadeOutLink">LET'S BEGIN</a>
+        </div>
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="7t-core-video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script>
+        $('body').removeClass('fade-out');
+        //Class Based Transition
+
+        $('.fadeOut').click(function(e) {
+            e.preventDefault();
+            var link = $(this).attr('href');
+            $('body').addClass('fade-out');
+            setTimeout(function() {
+                window.location = link
+            }, 1000);
+        })
+
+        // All internal Link Transition
+
+        $('a').each(function(e) {
+
+            if (location.hostname === this.hostname || !this.hostname.length) {
+                var link = $(this).attr('href');
+                if (link.match("^#")) {
+                    //insert scroll function  
+
+                } else if (link.match("^mailto") || link.match("^tel")) {
+                    // continue
+
+                } else {
+                    if ($(this).attr('target') == '_blank') {
+                        //continue
+                    } else {
+                        $(this).click(function(e) {
+                            e.preventDefault();
+                            $('body').addClass('fadeOut');
+                            setTimeout(function() {
+                                window.location = link;
+                            }, 1000);
+                        });
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

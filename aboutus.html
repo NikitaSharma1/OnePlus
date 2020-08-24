@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aboutus</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <section id="section1">
+            <div class="main-wrapper">
+
+                <div class="header">
+                    <div class="logo">
+                        <div class="logo-wrapper">
+                            <img src="oneplus-logo.png" alt="" class="oneplus">
+
+                        </div>
+                    </div>
+                    <div class="nav-bar">
+                        <div class="nav-wrapper">
+
+                            <ul id="nav-ul">
+                                <li class="nav-li"><a href="2.homepage.html">HOME</a></li>
+                                <li class="nav-li FadeOutLink">
+                                    <a href="aboutus.html">ABOUT US</a></li>
+
+                                <li class="nav-li dropdown FadeOutLink">
+                                    <a href="#" class="nav-li">PRODUCTS</a>
+                                    <div class="dropdown-content">
+                                        <a href="OnePlus7.html" class="droplink FadeOutLink">OnePlus 7</a>
+                                        <a href="OnePlus7t.html" class="droplink FadeOutLink">Oneplus 7t</a>
+                                        <a href="OnePlus7pro.html" class="droplink FadeOutLink">OnePlus 7 pro</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <div class="video-container">
+                    <video autoplay loop muted>
+                        <source src="4K_2.mp4" type="">
+                    </video>
+                </div>
+                <div class="main-wrapper">
+                    <div class="text">
+                        <div class="video-container2">
+                            <video autoplay loop muted class="size">
+                                <source src="InShot_20200430_152500805.mp4" type="">
+                            </video>
+                        </div>
+                        <div class="about">
+                            <h1 class="heading">About Us</h1>
+                            <div class="about-wrapper">
+                                <p>One Plus Technology (Shenzhen) Co., Ltd., commonly referred to as OnePlus, is a Chinese smartphone manufacturer owned by BBK Electronics, which is based in Shenzhen, Guangdong. It was founded by Pete Lau (CEO) and Carl Pei in December 2013. The company officially serves 34 countries and regions around the world as of July 2018. </p>
+                                <div class="letsstart">
+                                    <a href="#section2">Read More</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="sec2">
+                <div class="sec2-wrapper">
+
+                    <img src="ironman.jpeg" alt="" class="pic">
+                    <div class="para">
+                        <p><span style="font-size: 25px; font-weight: bold">Welcome OnePlus Brand Ambassador — Robert Downey Jr.</span>
+                            <br>
+                            <br> In the Pursuit of Perfection, do your best.During our time working with RDJ, we realized we share the same beliefs. His charming personality, creativity and profession-al dedication made us believe that he is the best candidate to represent the OnePlus brand spirit of Never Settle. We welcome Robert Downey Jr to the OnePlus family.</p>
+                        <a href="#section3">Click to view video</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <iframe width="100%" height="600" src="https://www.youtube-nocookie.com/embed/waPqXbyuHlY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="fs1">
+                    <div class="logo-footer">
+                        <div class="logo-footer-wrapper">
+                            <span style="color: red">ONEPLUS</span>
+                            <p class="copyright-footer">Copyright@2045 Your Company</p>
+                            <p class="copyright-footer">Design: TemplateMo</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fs2">
+                    <div class="location">
+                        <div class="location-wrapper">
+                            <div class="location1">
+                                <h5 class="location1-heading">LOCATION</h5>
+                                <p class="location1-address">30 bvubicai Ave, China 039803</p>
+                            </div>
+                            <div class="location2">
+                                <p class="location2-address">1 nihaatika marg, Mumbai 795242</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fs3">
+                    <div class="more-info">
+                        <div class="more-info-wrapper">
+                            <h5 class="moreinfo-heading">MORE INFO  </h5>
+                            <p class="phone-footer"><b>Phone:</b> 090-090-0320</p>
+                            <p class="email-footer"><b>Email:</b> op@company.co</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fs4">
+                    <h5 class="social-heading">GET SOCIAL WITH US</h5>
+                    <div class="main">
+
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-snapchat-ghost"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $('body').removeClass('fade-out');
+
+        $('.fadeOut').click(function(e) {
+            e.preventDefault();
+            var link = $(this).attr('href');
+            $('body').addClass('fade-out');
+            setTimeout(function() {
+                window.location = link
+            }, 1000);
+        })
+
+        $('a').each(function(e) {
+
+            if (location.hostname === this.hostname || !this.hostname.length) {
+                var link = $(this).attr('href');
+                if (link.match("^#")) {
+
+                } else if (link.match("^mailto") || link.match("^tel")) {} else {
+                    if ($(this).attr('target') == '_blank') {
+                        //continue
+                    } else {
+                        $(this).click(function(e) {
+                            e.preventDefault();
+                            $('body').addClass('fadeOut');
+                            setTimeout(function() {
+                                window.location = link;
+                            }, 1000);
+                        });
+                    }
+                }
+            }
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#flip").click(function() {
+                $("#panel").slideDown("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>
